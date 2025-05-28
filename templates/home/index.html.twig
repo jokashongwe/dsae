@@ -60,7 +60,7 @@
 						<div class="swiper-slide display-style--full">
 							<span name="d.en.635076"></span>
 							<div class="component-15__background">
-								<img src="images/food%20science%20and%20health%20banner.png" alt="MSc in Food Science with Nutrition">
+								<img src="images/production_vegetale.jpeg" alt="Msc en Production végétale">
 							</div>
 							<div class="component-15__overlay"></div>
 							<div class="component-15__gradient component-15__gradient--yellow"></div>
@@ -70,9 +70,12 @@
 							</div>
 							<div class="component-15__content">
 								<div class="container">
-									<h2 class="heading-xxxl">MSc in Food Science with Nutrition</h2>
-									<h3 class="heading-md">The MSc in Food Science with Nutrition at UCD is designed to equip you with cutting-edge knowledge and the skills required to address the challenges and opportunities in the global food industry.</h3>
-									<a href="https://hub.ucd.ie/usis/!W_HU_MENU.P_PUBLISH?p_tag=COURSE&MAJR=D098" class="btn btn-primary">Learn More</a>
+									<h2 class="heading-xxxl">Msc en Production végétale</h2>
+									<h3 class="heading-md">
+										Le Msc en Production végétale est conçu pour vous doter de connaissances de pointe et des compétences nécessaires 
+										pour relever les défis et saisir les opportunités de l'industrie alimentaire mondiale.
+									</h3>
+									<a href="/programmes-master/production-vegetale" class="btn btn-primary">En savoir-plus</a>
 								</div>
 							</div>
 						</div>
@@ -97,25 +100,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="swiper-slide display-style--full">
-							<span name="d.en.641526"></span>
-							<div class="component-15__background">
-								<img src="images/field%2012.jpg" alt="UCD Lyons Farm">
-							</div>
-							<div class="component-15__overlay"></div>
-							<div class="component-15__gradient component-15__gradient--yellow"></div>
-							<div class="component-15__gradient component-15__gradient--blue"></div>
-							<div class="component-15__grid-overlay">
-								<img src="images/hero-1.png" alt="overlay image">
-							</div>
-							<div class="component-15__content">
-								<div class="container">
-									<h2 class="heading-xxxl">UCD Lyons Farm</h2>
-									<h3 class="heading-md">UCD Lyons Farm operates mixed enterprises, supporting teaching and research in the areas of beef, crops, dairy, equine, sheep and pigs and is an important resource for the School’s of Agriculture and Food Science and Veterinary Medicine.</h3>
-									<a href="https://www.ucd.ie#/about/ucdlyonsfarm/" class="btn btn-primary">LEARN MORE</a>
-								</div>
-							</div>
-						</div>
+						
 					</div>
 					<div class="swiper-pagination container"></div>
 					<div class="swiper-button-prev">
@@ -149,35 +134,25 @@
 									<div class="component-12__head"></div>
 									<div class="component-12__extras">
 										<div class="component-12__extras--title">
-											How can we help you?
+											Comment pouvons-nous vous aider ?
 										</div>
 										<div class="component-12__dropdown dropdown">
-											<button class="btn btn-secondary dropdown-toggle" type="button" id="c12-dropdown-337669" data-bs-toggle="dropdown" aria-expanded="false">Please Select</button>
+											<button class="btn btn-secondary dropdown-toggle" type="button" id="c12-dropdown-337669" data-bs-toggle="dropdown" aria-expanded="false">Veuillez sélectionner</button>
 											<ul class="dropdown-menu" aria-labelledby="c12-dropdown-337669">
 												<li>
-													<a class="dropdown-item" href="#/study/undergraduateprogrammes/">Undergraduate Programmes</a>
+													<a class="dropdown-item" href="#/programmes-licences/">Programmes de Licences</a>
 												</li>
 												<li>
-													<a class="dropdown-item" href="#/study/graduatetaughtprogrammes/">Graduate Taught Programmes</a>
+													<a class="dropdown-item" href="#/programmes-master/">Programmes de Maitrise</a>
 												</li>
 												<li>
-													<a class="dropdown-item" href="#/study/graduateresearchprogrammes/">Graduate Research Programmes</a>
+													<a class="dropdown-item" href="#/recherches/">Recherches</a>
 												</li>
 												<li>
-													<a class="dropdown-item" href="#/study/internationalstudents/">International Students</a>
+													<a class="dropdown-item" href="#/about/staff">Professeurs & Chercheurs</a>
 												</li>
 												<li>
-													<a class="dropdown-item" href="#/research/">Research
-													</a>
-												</li>
-												<li>
-													<a class="dropdown-item" href="#/about/ediequalitydiversityandinclusion/startingoutatschoolofagricultureandfoodscience/">New Staff and Student information</a>
-												</li>
-												<li>
-													<a class="dropdown-item" href="#/newsandevents/upcomingevents/">Upcoming Events</a>
-												</li>
-												<li>
-													<a class="dropdown-item" href="#/contact/">Contact Us</a>
+													<a class="dropdown-item" href="#/contact/">Nous Contacter</a>
 												</li>
 											</ul>
 										</div>
@@ -214,236 +189,38 @@
 			<span name="d.en.810346"></span>
 			<div class="component-25">
 				<div class="container">
-					<h2 class="component-25__title">Recent News</h2>
+					<h2 class="component-25__title">Actualités Récentes</h2>
 					<div
 						class="swiper swiper-gallery swiper--arrows swiper--arrows--navy">
 						<!-- Additional required wrapper -->
 						<div class="swiper-wrapper">
-							<div class="swiper-slide">
-								<a href="#/newsandevents/news/recentnews2025/sineadflanneryreceivestheucdvaluesinactionaward/" title="Go to 'Dr. Sinéad Flannery, Assistant Professor in Behavioural Science in Agriculture and Rural Development and School Professional Work Experience Co-Ordinator has received the UCD Values in Action Award 2025. ' page">
-									<div class="component-25__item">
-										<span name="d.en.819764"></span>
-										<div class="component-25__item--img ">
-											<img src="images/SInead%20Flannery.jpg" loading="lazy" alt="Dr. Sinéad Flannery, Assistant Professor in Behavioural Science in Agriculture and Rural Development and School Professional Work Experience Co-Ordinator has received the UCD Values in Action Award 2025. ">
-											<span class="component-25__item--date">19<span>May</span>
+							{% for article in articles %}
+								<div class="swiper-slide">
+									<a href="/articles/{{ article.id }}" title="{{ article.title }}">
+										<div class="component-25__item">
+											<span name="d.en.819764"></span>
+											<div class="component-25__item--img ">
+												<img src="/uploads/articles/{{ article.primaryImage }}" loading="lazy" alt="{{ article.title }}">
+												<span class="component-25__item--date">{{ article.pubDate | date("d") }}<span>{{ article.pubDate | date("M") }}</span>
 											</span>
-										</div>
-										<div class="component-25__item--content">
-											<h5 class="component-25__item--title">Dr. Sinéad Flannery, Assistant Professor in Behavioural Science in Agriculture and Rural Development and School Professional Work Experience Co-Ordinator has received the UCD Values in Action Award 2025.
-											</h5>
-											<p>Dr. Sinéad Flannery, Assistant Professor in Behavioural Science in Agriculture and Rural Development and School Professional Work Experience Co-Ordinator received the UCD Values in Action Award 2025 at a ceremony in the University Club.</p>
-										</div>
-										<div class="component-25__cta">
-											<div class="btn btn-green-bright btn-icon">
-												<svg width="47" height="26" viewbox="0 0 47 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-													<path d="M33.4165 0L44.9721 11.5556L46.2962 13L44.9721 14.4444L33.4165 26L30.648 23.1111L38.9536 14.9259H0.314697V11.0741H38.9536L30.648 2.88889L33.4165 0Z" fill="currentColor"></path>
-												</svg>
+											</div>
+											<div class="component-25__item--content">
+												<h5 class="component-25__item--title">{{ article.title }}
+												</h5>
+												<p>{{ article.body }}</p>
+											</div>
+											<div class="component-25__cta">
+												<div class="btn btn-green-bright btn-icon">
+													<svg width="47" height="26" viewbox="0 0 47 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M33.4165 0L44.9721 11.5556L46.2962 13L44.9721 14.4444L33.4165 26L30.648 23.1111L38.9536 14.9259H0.314697V11.0741H38.9536L30.648 2.88889L33.4165 0Z" fill="currentColor"></path>
+													</svg>
+												</div>
 											</div>
 										</div>
-									</div>
-									<!--/.component-25__item-->
-								</a>
-							</div>
-							<div class="swiper-slide">
-								<a href="#/newsandevents/news/recentnews2025/johnrocheannouncedaschiefscienceadvisor/" title="Go to 'UCD Animal Science and Agriculture PhD alum Dr. John Roche who has been appointed New Zealand Prime Minister Christopher Luxon's Chief Science Advisor. ' page">
-									<div class="component-25__item">
-										<span name="d.en.818083"></span>
-										<div class="component-25__item--img ">
-											<img src="images/John-Roche-flat-3.jpg.jpg" loading="lazy" alt="UCD Animal Science and Agriculture PhD alum Dr. John Roche who has been appointed New Zealand Prime Minister Christopher Luxon\'s Chief Science Advisor. ">
-											<span class="component-25__item--date">08<span>May</span>
-											</span>
-										</div>
-										<div class="component-25__item--content">
-											<h5 class="component-25__item--title">UCD Animal Science and Agriculture PhD alum Dr. John Roche who has been appointed New Zealand Prime Minister Christopher Luxon's Chief Science Advisor.
-											</h5>
-											<p>UCD Animal Science and Agriculture PhD alum Dr. John Roche who has been appointed New Zealand Prime Minister Christopher Luxon's Chief Science Advisor. The Ministry for Primary Industries (MPI) New Zealand executive joins a number of other key personnel as part of the Prime Minister's Science and Technology Advisory Council and he will also act as as deputy chair for the Council.
-											</p>
-										</div>
-										<div class="component-25__cta">
-											<div class="btn btn-green-bright btn-icon">
-												<svg width="47" height="26" viewbox="0 0 47 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-													<path d="M33.4165 0L44.9721 11.5556L46.2962 13L44.9721 14.4444L33.4165 26L30.648 23.1111L38.9536 14.9259H0.314697V11.0741H38.9536L30.648 2.88889L33.4165 0Z" fill="currentColor"></path>
-												</svg>
-											</div>
-										</div>
-									</div>
-									<!--/.component-25__item-->
-								</a>
-							</div>
-							<div class="swiper-slide">
-								<a href="#/newsandevents/news/recentnews2025/championsforsafety/" title="Go to 'Champions for Safety event takes place at UCD ' page">
-									<div class="component-25__item">
-										<span name="d.en.815806"></span>
-										<div class="component-25__item--img ">
-											<img src="images/IMG_2820.jpg" loading="lazy" alt="Champions for Safety event takes place at UCD ">
-											<span class="component-25__item--date">24<span>Apr</span>
-											</span>
-										</div>
-										<div class="component-25__item--content">
-											<h5 class="component-25__item--title">Champions for Safety event takes place at UCD
-											</h5>
-											<p>As part of the 2nd years Health, Welfare and Safety module, we were delighted to welcome a fantastic line up of speakers to Faculté des Sciences Agronomiques for the “Champions For Safety” event.
-											</p>
-										</div>
-										<div class="component-25__cta">
-											<div class="btn btn-green-bright btn-icon">
-												<svg width="47" height="26" viewbox="0 0 47 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-													<path d="M33.4165 0L44.9721 11.5556L46.2962 13L44.9721 14.4444L33.4165 26L30.648 23.1111L38.9536 14.9259H0.314697V11.0741H38.9536L30.648 2.88889L33.4165 0Z" fill="currentColor"></path>
-												</svg>
-											</div>
-										</div>
-									</div>
-									<!--/.component-25__item-->
-								</a>
-							</div>
-							<div class="swiper-slide">
-								<a href="#/newsandevents/news/recentnews2025/ucdteagascknowledgetransferfundedmasters2025/" title="Go to 'UCD Teagasc Knowledge Transfer Funded Masters 2025' page">
-									<div class="component-25__item">
-										<span name="d.en.812983"></span>
-										<div class="component-25__item--img ">
-											<img src="images/knowledge%20transfer.jpeg" loading="lazy" alt="UCD Teagasc Knowledge Transfer Funded Masters 2025">
-											<span class="component-25__item--date">09<span>Apr</span>
-											</span>
-										</div>
-										<div class="component-25__item--content">
-											<h5 class="component-25__item--title">UCD Teagasc Knowledge Transfer Funded Masters 2025</h5>
-											<p>The MSc Agricultural Extension and Innovation and MSc Agricultural Innovation Support; collaborative funded programmes delivered by UCD and Teagasc are now open for applications.</p>
-										</div>
-										<div class="component-25__cta">
-											<div class="btn btn-green-bright btn-icon">
-												<svg width="47" height="26" viewbox="0 0 47 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-													<path d="M33.4165 0L44.9721 11.5556L46.2962 13L44.9721 14.4444L33.4165 26L30.648 23.1111L38.9536 14.9259H0.314697V11.0741H38.9536L30.648 2.88889L33.4165 0Z" fill="currentColor"></path>
-												</svg>
-											</div>
-										</div>
-									</div>
-									<!--/.component-25__item-->
-								</a>
-							</div>
-							<div class="swiper-slide">
-								<a href="#/newsandevents/news/recentnews2025/developmentofahybridhuman-aipersonalisedlearningpathforvetforinnovationinagriculture/" title="Go to 'Development of a Hybrid Human-AI personalised learning path for VET for innovation in agriculture' page">
-									<div class="component-25__item">
-										<span name="d.en.812103"></span>
-										<div class="component-25__item--img ">
-											<img src="images/PERSONA%20-%20update.png" loading="lazy" alt="Development of a Hybrid Human-AI personalised learning path for VET for innovation in agriculture">
-											<span class="component-25__item--date">06<span>Apr</span>
-											</span>
-										</div>
-										<div class="component-25__item--content">
-											<h5 class="component-25__item--title">Development of a Hybrid Human-AI personalised learning path for VET for innovation in agriculture</h5>
-											<p>Persona is an EU-funded project aiming to develop new innovative solutions and learning paths in agriculture, making use of a hybrid human-AI format.
-											</p>
-										</div>
-										<div class="component-25__cta">
-											<div class="btn btn-green-bright btn-icon">
-												<svg width="47" height="26" viewbox="0 0 47 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-													<path d="M33.4165 0L44.9721 11.5556L46.2962 13L44.9721 14.4444L33.4165 26L30.648 23.1111L38.9536 14.9259H0.314697V11.0741H38.9536L30.648 2.88889L33.4165 0Z" fill="currentColor"></path>
-												</svg>
-											</div>
-										</div>
-									</div>
-									<!--/.component-25__item-->
-								</a>
-							</div>
-							<div class="swiper-slide">
-								<a href="#/newsandevents/news/recentnews2025/ucdwelcomesnewzealandambassadortoirelandmrtrevormallard/" title="Go to 'UCD welcomes New Zealand Ambassador to Ireland, Mr Trevor Mallard ' page">
-									<div class="component-25__item">
-										<span name="d.en.812109"></span>
-										<div class="component-25__item--img ">
-											<img src="images/new%20zealand4.jpg" loading="lazy" alt="UCD welcomes New Zealand Ambassador to Ireland, Mr Trevor Mallard ">
-											<span class="component-25__item--date">04<span>Apr</span>
-											</span>
-										</div>
-										<div class="component-25__item--content">
-											<h5 class="component-25__item--title">UCD welcomes New Zealand Ambassador to Ireland, Mr Trevor Mallard
-											</h5>
-											<p>The Faculté des Sciences Agronomiques was delighted to welcome New Zealand Ambassador to Ireland, Mr Trevor Mallard and New Zealand’s Special Agricultural Trade Envoy Hamish Marr to UCD Lyons Farm.
-											</p>
-										</div>
-										<div class="component-25__cta">
-											<div class="btn btn-green-bright btn-icon">
-												<svg width="47" height="26" viewbox="0 0 47 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-													<path d="M33.4165 0L44.9721 11.5556L46.2962 13L44.9721 14.4444L33.4165 26L30.648 23.1111L38.9536 14.9259H0.314697V11.0741H38.9536L30.648 2.88889L33.4165 0Z" fill="currentColor"></path>
-												</svg>
-											</div>
-										</div>
-									</div>
-									<!--/.component-25__item-->
-								</a>
-							</div>
-							<div class="swiper-slide">
-								<a href="#/newsandevents/news/recentnews2025/ministerheydonpresentswomeninagriculturestudiesexcellenceaward/" title="Go to 'Minister Heydon presents Women in Agriculture Studies Excellence Award' page">
-									<div class="component-25__item">
-										<span name="d.en.810334"></span>
-										<div class="component-25__item--img ">
-											<img src="images/Women%20in%20Agriculture-5.jpg" loading="lazy" alt="Minister Heydon presents Women in Agriculture Studies Excellence Award">
-											<span class="component-25__item--date">27<span>Mar</span>
-											</span>
-										</div>
-										<div class="component-25__item--content">
-											<h5 class="component-25__item--title">Minister Heydon presents Women in Agriculture Studies Excellence Award</h5>
-											<p>The Minister for Agriculture, Food and the Marine, Martin Heydon, TD, today presented the Women in Agriculture Studies Excellence Award to Ruth Connolly, a final year PhD student in Animal Science at Faculté des Sciences Agronomiques (SAFS).
-												<br></p>
-										</div>
-										<div class="component-25__cta">
-											<div class="btn btn-green-bright btn-icon">
-												<svg width="47" height="26" viewbox="0 0 47 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-													<path d="M33.4165 0L44.9721 11.5556L46.2962 13L44.9721 14.4444L33.4165 26L30.648 23.1111L38.9536 14.9259H0.314697V11.0741H38.9536L30.648 2.88889L33.4165 0Z" fill="currentColor"></path>
-												</svg>
-											</div>
-										</div>
-									</div>
-									<!--/.component-25__item-->
-								</a>
-							</div>
-							<div class="swiper-slide">
-								<a href="#/newsandevents/news/recentnews2025/farmwalkandtalk2025/" title="Go to 'Farm Walk and Talk 2025' page">
-									<div class="component-25__item">
-										<span name="d.en.810335"></span>
-										<div class="component-25__item--img ">
-											<img src="images/image00140.jpg" loading="lazy" alt="Farm Walk and Talk 2025">
-											<span class="component-25__item--date">12<span>Mar</span>
-											</span>
-										</div>
-										<div class="component-25__item--content">
-											<h5 class="component-25__item--title">Farm Walk and Talk 2025</h5>
-											<p>UCD Lyons Farm welcomed students from Dublin, Meath, Kildare, Wicklow, Wexford, Westmeath, Laois, Offaly and even as far as Donegal to give them a practical insight into many of the themes in the Leaving Certificate agricultural science syllabus.</p>
-										</div>
-										<div class="component-25__cta">
-											<div class="btn btn-green-bright btn-icon">
-												<svg width="47" height="26" viewbox="0 0 47 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-													<path d="M33.4165 0L44.9721 11.5556L46.2962 13L44.9721 14.4444L33.4165 26L30.648 23.1111L38.9536 14.9259H0.314697V11.0741H38.9536L30.648 2.88889L33.4165 0Z" fill="currentColor"></path>
-												</svg>
-											</div>
-										</div>
-									</div>
-									<!--/.component-25__item-->
-								</a>
-							</div>
-							<div class="swiper-slide">
-								<a href="#/newsandevents/news/recentnews2025/prouddayatucdawardsday/" title="Go to 'Proud Day at UCD Awards Day' page">
-									<div class="component-25__item">
-										<span name="d.en.810514"></span>
-										<div class="component-25__item--img ">
-											<img src="images/IMG_2118.jpg" loading="lazy" alt="Proud Day at UCD Awards Day">
-											<span class="component-25__item--date">07<span>Mar</span>
-											</span>
-										</div>
-										<div class="component-25__item--content">
-											<h5 class="component-25__item--title">Proud Day at UCD Awards Day</h5>
-											<p>A very special day in the UCD calendar, the School of Agriculture and Food Science where delighted to celebrate students who were rewarded for their exceptional sporting, academic, and artistic achievement at UCD Awards Day</p>
-										</div>
-										<div class="component-25__cta">
-											<div class="btn btn-green-bright btn-icon">
-												<svg width="47" height="26" viewbox="0 0 47 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-													<path d="M33.4165 0L44.9721 11.5556L46.2962 13L44.9721 14.4444L33.4165 26L30.648 23.1111L38.9536 14.9259H0.314697V11.0741H38.9536L30.648 2.88889L33.4165 0Z" fill="currentColor"></path>
-												</svg>
-											</div>
-										</div>
-									</div>
-									<!--/.component-25__item-->
-								</a>
-							</div>
+										<!--/.component-25__item-->
+									</a>
+								</div>
+							{% endfor %}
 						</div>
 						<!--/.swiper-wrapper-->
 						<!-- If we need pagination -->
@@ -463,7 +240,7 @@
 					<!--/.swiper-->
 					<div class="row">
 						<div class="col-12 d-flex justify-content-center">
-							<a href="#/newsandevents/" class="btn btn-primary" title="Go to 'All News' page">All News</a>
+							<a href="#/actualites/" class="btn btn-primary" title="Go to 'All News' page">Toutes les actualités</a>
 						</div>
 					</div>
 				</div>
@@ -474,17 +251,17 @@
 			<span name="d.en.337674"></span>
 			<div class="component-13">
 				<div class="container">
-					<h2 class="component-13__title">Spotlights</h2>
+					<h2 class="component-13__title"></h2>
 					<div class="row">
 						<div class="col-12 col-md-6 col-lg-4 d-flex">
-							<a href="#/study/undergraduateprogrammes/" title="Go to 'Find out about the range of undergraduate programmes on offer in Agriculture, Horticulture, Forestry, Food Science and Human Nutrition' page">
+							<a href="#/study/undergraduateprogrammes/" title="Go to 'Découvrez l'éventail des programmes de premier cycle proposés dans les domaines de l'agriculture, de l'horticulture, de la sylviculture, des sciences alimentaires et de la nutrition humaine.' page">
 								<div class="component-13__item">
 									<div class="component-13__item--img">
-										<img src="images/FotoJet-6-scaled.jpg" alt="Find out about the range of undergraduate programmes on offer in Agriculture, Horticulture, Forestry, Food Science and Human Nutrition" loading="lazy">
-										<span class="component-13__item--tag">Undergraduate Programmes</span>
+										<img src="images/research.jpg" alt="Découvrez l'éventail des programmes de premier cycle proposés dans les domaines de l'agriculture, de l'horticulture, de la sylviculture, des sciences alimentaires et de la nutrition humaine." loading="lazy">
+										<span class="component-13__item--tag">Licences</span>
 									</div>
 									<div class="component-13__item--content">
-										<h5 class="component-13__item--title">Find out about the range of undergraduate programmes on offer in Agriculture, Horticulture, Forestry, Food Science and Human Nutrition</h5>
+										<h5 class="component-13__item--title">Découvrez l'éventail des programmes de premier cycle proposés dans les domaines de l'agriculture, de l'horticulture, de la sylviculture, des sciences alimentaires et de la nutrition humaine.</h5>
 									</div>
 									<div class="component-13__cta">
 										<div class="btn btn-blue btn-icon">
@@ -498,14 +275,14 @@
 						</div>
 						<!--/.col-->
 						<div class="col-12 col-md-6 col-lg-4 d-flex">
-							<a href="#/study/graduatetaughtprogrammes/" title="Go to 'Learn more about our Graduate Taught programmes' page">
+							<a href="#/study/graduatetaughtprogrammes/" title="Go to 'En savoir plus sur nos programmes de maitrises' page">
 								<div class="component-13__item">
 									<div class="component-13__item--img">
-										<img src="images/Agri%20extension.jpeg" alt="Learn more about our Graduate Taught programmes" loading="lazy">
-										<span class="component-13__item--tag">Graduate Taught Programmes</span>
+										<img src="images/masterimg.jpeg" alt="En savoir plus sur nos programmes de maitrises" loading="lazy">
+										<span class="component-13__item--tag">Master</span>
 									</div>
 									<div class="component-13__item--content">
-										<h5 class="component-13__item--title">Learn more about our Graduate Taught programmes</h5>
+										<h5 class="component-13__item--title">En savoir plus sur nos programmes de maitrises</h5>
 									</div>
 									<div class="component-13__cta">
 										<div class="btn btn-blue btn-icon">
@@ -519,14 +296,14 @@
 						</div>
 						<!--/.col-->
 						<div class="col-12 col-md-6 col-lg-4 d-flex">
-							<a href="#/contact/staffprofiles/" title="Go to 'Meet staff from the UCD School of Agriculture & Food Science' page">
+							<a href="#/contact/staffprofiles/" title="Go to 'Rencontrez le personnel de la factulté d'agriculture et environement de l'uni uele' page">
 								<div class="component-13__item">
 									<div class="component-13__item--img">
-										<img src="images/Staff_Home_Page2.png" alt="Home3ColSpot_Staff" loading="lazy">
-										<span class="component-13__item--tag">Staff Profiles</span>
+										<img src="images/uniuele.jpg" alt="Home3ColSpot_Staff" loading="lazy">
+										<span class="component-13__item--tag">Corps Enseignant</span>
 									</div>
 									<div class="component-13__item--content">
-										<h5 class="component-13__item--title">Meet staff from the UCD School of Agriculture & Food Science</h5>
+										<h5 class="component-13__item--title">Rencontrez le personnel de la factulté d'agriculture et environement de l'uni uele</h5>
 									</div>
 									<div class="component-13__cta">
 										<div class="btn btn-blue btn-icon">
@@ -539,147 +316,53 @@
 							</a>
 						</div>
 						<!--/.col-->
-						<div class="col-12 col-md-6 col-lg-4 d-flex">
-							<a href="#/newsandevents/news/recentnews2023/safsachievesfirstsilverathenaswanawardinucd/" title="Go to 'We are very proud of our recent Athena Swan Silver Award. Visit our EDI pages and learn about our commitment to creating an inclusive environment for students and staff.' page">
-								<div class="component-13__item">
-									<div class="component-13__item--img">
-										<img src="images/Athena%20Swan%20Silver-718x360.jpg" alt="Athena Swan Silver Award" loading="lazy">
-										<span class="component-13__item--tag">Equality, Diversity and Inclusion</span>
-									</div>
-									<div class="component-13__item--content">
-										<h5 class="component-13__item--title">We are very proud of our recent Athena Swan Silver Award. Visit our EDI pages and learn about our commitment to creating an inclusive environment for students and staff.</h5>
-									</div>
-									<div class="component-13__cta">
-										<div class="btn btn-blue btn-icon">
-											<svg width="47" height="26" viewbox="0 0 47 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-												<path d="M33.4165 0L44.9721 11.5556L46.2962 13L44.9721 14.4444L33.4165 26L30.648 23.1111L38.9536 14.9259H0.314697V11.0741H38.9536L30.648 2.88889L33.4165 0Z" fill="currentColor"></path>
-											</svg>
-										</div>
-									</div>
-								</div>
-							</a>
-						</div>
-						<!--/.col-->
-						<div class="col-12 col-md-6 col-lg-4 d-flex">
-							<a href="#/newsandevents/" title="Go to 'Information on upcoming or recent events hosted at the Faculté des Sciences Agronomiques' page">
-								<div class="component-13__item">
-									<div class="component-13__item--img">
-										<img src="images/web%20news.JPG" alt="Information on upcoming or recent events hosted at the Faculté des Sciences Agronomiques" loading="lazy">
-										<span class="component-13__item--tag">News & Events
-										</span>
-									</div>
-									<div class="component-13__item--content">
-										<h5 class="component-13__item--title">Information on upcoming or recent events hosted at the Faculté des Sciences Agronomiques</h5>
-									</div>
-									<div class="component-13__cta">
-										<div class="btn btn-blue btn-icon">
-											<svg width="47" height="26" viewbox="0 0 47 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-												<path d="M33.4165 0L44.9721 11.5556L46.2962 13L44.9721 14.4444L33.4165 26L30.648 23.1111L38.9536 14.9259H0.314697V11.0741H38.9536L30.648 2.88889L33.4165 0Z" fill="currentColor"></path>
-											</svg>
-										</div>
-									</div>
-								</div>
-							</a>
-						</div>
-						<!--/.col-->
-						<div class="col-12 col-md-6 col-lg-4 d-flex">
-							<a href="#/research/" title="Go to 'Learn more about the world-class agri-food research undertaken at UCD' page">
-								<div class="component-13__item">
-									<div class="component-13__item--img">
-										<img src="images/Home3ColSpot_Research_7.jpg" alt="Learn more about the world-class agri-food research undertaken at UCD" loading="lazy">
-										<span class="component-13__item--tag">Research
-										</span>
-									</div>
-									<div class="component-13__item--content">
-										<h5 class="component-13__item--title">Learn more about the world-class agri-food research undertaken at UCD</h5>
-									</div>
-									<div class="component-13__cta">
-										<div class="btn btn-blue btn-icon">
-											<svg width="47" height="26" viewbox="0 0 47 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-												<path d="M33.4165 0L44.9721 11.5556L46.2962 13L44.9721 14.4444L33.4165 26L30.648 23.1111L38.9536 14.9259H0.314697V11.0741H38.9536L30.648 2.88889L33.4165 0Z" fill="currentColor"></path>
-											</svg>
-										</div>
-									</div>
-								</div>
-							</a>
-						</div>
 						<!--/.col-->
 					</div>
 					<!--/.row-->
 				</div>
 			</div>
 		</section>
-		<!-- ucdcanc-HomeCampaign - component 14 -->
-		<section class="section section--component-14" id="h337675">
-			<span name="d.en.337675"></span>
-			<div class="component-14">
-				<div class="container component-14__container">
-					<img src="images/new%20international%20image%20copy.jpeg" alt="INTERNATIONAL STUDENTS">
-					<div class="component-14__wrapper">
-						<h2 class="component-14__title">INTERNATIONAL STUDENTS</h2>
-						<p>“The high reputation of teaching quality<br>and research in agriculture and the<br>environment is one of my reasons to choose UCD.”<br>Wenbo Hu, BAgrSc Agri-Environmental Sciences</p>
-						<div class="component-14__cta d-flex flex-wrap">
-							<a href="#/study/internationalstudents/" class="btn btn-navy">International Students</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<!-- /ucdcanc-HomeCampaign - component 14 -->
-		<!-- ucdcanc-JuicerFeed - component 26 -->
-		<section id="h337676" class="section section--component-26 section--pattern section--pattern-gradient ">
-			<span name="d.en.337676"></span>
-			<div class="component-26">
-				<div class="container">
-					<h2 class="component-26__title">Social Media Latest</h2>
-					<div class="feed-wrapper">
-						<script type="text/javascript" src="js/embed-code.js" async="" defer=""></script>
-					</div>
-				</div>
-			</div>
-		</section>
-		<!--/ucdcanc-JuicerFeed -->
-		<!--school contact - component 5 -->
+
 		<section class="section section--component-5">
 			<span name="d.en.632995"></span>
 			<div class="component-5">
 				<div class="container">
 					<h2 class="heading-xl">Faculté des Sciences Agronomiques</h2>
-					<address>Agriculture and Food Science Centre, University College Dublin, Belfield, Dublin 4, Ireland.</address>
+					<address>Université de l'Uele, Isiro, RDC.</address>
 					<address>
 						T:
-						<a href="tel:+353 1 716 7205">+353 1 716 7205</a>
+						<a href="tel:+243 810 --- ---">+243 810 --- ---</a>
 						|
 						<a href="https://goo.gl/maps/fhDsLvmvzdjLcniq5" target="_blank" rel="noopener" tabindex="0" title="Go to 'Location Map' page">Location Map<span class="sr-only">(opens in a new window)</span>
 						</a>
 					</address>
 					<ul class="component-5__social">
 						<li>
-							<a href="https://www.facebook.com/ucdagfood" target="_blank" rel="noopener" tabindex="0" title="Go to 'Facebook' page">
+							<a href="#" target="_blank" rel="noopener" tabindex="0" title="Go to 'Facebook' page">
 								<i class="lab la-facebook-f"></i>
 								<span class="sr-only">(opens in a new window)</span>
 							</a>
 						</li>
 						<li>
-							<a href="https://twitter.com/ucdagfood" target="_blank" rel="noopener" tabindex="0" title="Go to 'Twitter' page">
+							<a href="#" target="_blank" rel="noopener" tabindex="0" title="Go to 'Twitter' page">
 								<i class="lab la-twitter"></i>
 								<span class="sr-only">(opens in a new window)</span>
 							</a>
 						</li>
 						<li>
-							<a href="https://www.youtube.com/user/ucdagfood" target="_blank" rel="noopener" tabindex="0" title="Go to 'YouTube' page">
+							<a href="#" target="_blank" rel="noopener" tabindex="0" title="Go to 'YouTube' page">
 								<i class="lab la-youtube"></i>
 								<span class="sr-only">(opens in a new window)</span>
 							</a>
 						</li>
 						<li>
-							<a href="https://www.linkedin.com/school/ucdagfood/" target="_blank" rel="noopener" tabindex="0" title="Go to 'Linkedin' page">
+							<a href="#" target="_blank" rel="noopener" tabindex="0" title="Go to 'Linkedin' page">
 								<i class="lab la-linkedin-in"></i>
 								<span class="sr-only">(opens in a new window)</span>
 							</a>
 						</li>
 						<li>
-							<a href="https://www.instagram.com/ucdagfood/" target="_blank" rel="noopener" tabindex="0" title="Go to 'Instagram' page">
+							<a href="#" target="_blank" rel="noopener" tabindex="0" title="Go to 'Instagram' page">
 								<i class="lab la-instagram"></i>
 								<span class="sr-only">(opens in a new window)</span>
 							</a>
