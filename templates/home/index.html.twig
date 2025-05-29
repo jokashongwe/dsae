@@ -212,7 +212,7 @@
 											<div class="component-25__item--content">
 												<h5 class="component-25__item--title">{{ article.title }}
 												</h5>
-												<p>{{ article.body | raw }}</p>
+												<p>{{ article.body | slice(0, 50)  | striptags }}</p>
 											</div>
 											<div class="component-25__cta">
 												<div class="btn btn-green-bright btn-icon">
