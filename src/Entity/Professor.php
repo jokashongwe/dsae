@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\ProfessorRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 
@@ -28,6 +30,17 @@ class Professor
 
     #[ORM\Column(length: 10)]
     private ?string $grade = null;
+
+    /**
+     * @var Collection<int, StudyProgrammes>
+     */
+    #[ORM\OneToMany(targetEntity: StudyProgrammes::class, mappedBy: 'dean')]
+    private Collection $studyProgrammes;
+
+    public function __construct()
+    {
+        $this->studyProgrammes = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -90,6 +103,36 @@ class Professor
     public function setGrade(string $grade): static
     {
         $this->grade = $grade;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, StudyProgrammes>
+     */
+    public function getStudyProgrammes(): Collection
+    {
+        return $this->studyProgrammes;
+    }
+
+    public function addStudyProgramme(StudyProgrammes $studyProgramme): static
+    {
+        if (!$this->studyProgrammes->contains($studyProgramme)) {
+            $this->studyProgrammes->add($studyProgramme);
+            $studyProgramme->setDean($this);
+        }
+
+        return $this;
+    }
+
+    public function removeStudyProgramme(StudyProgrammes $studyProgramme): static
+    {
+        if ($this->studyProgrammes->removeElement($studyProgramme)) {
+            // set the owning side to null (unless already changed)
+            if ($studyProgramme->getDean() === $this) {
+                $studyProgramme->setDean(null);
+            }
+        }
 
         return $this;
     }
