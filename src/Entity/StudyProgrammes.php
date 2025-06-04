@@ -20,7 +20,7 @@ class StudyProgrammes
     #[ORM\Column(type: Types::TEXT)]
     private ?string $details = null;
 
-    #[ORM\Column(length: 100, nullable: true)]
+    #[ORM\Column(length: 255, nullable: true)]
     private ?string $shortDesc = null;
 
     #[ORM\Column(length: 255, nullable: true)]

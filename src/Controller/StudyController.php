@@ -15,14 +15,16 @@ final class StudyController extends AbstractController
     {
         return $this->render('study/index.html.twig', [
             'programs' => $study_programmes->findBy(['grade' => 'LICENCE']),
+            'programType'  => "Licences"
         ]);
     }
 
     #[Route('/study/graduateprogrammes', name: 'app_study_grad')]
     public function graduateprogrammes(StudyProgrammesRepository $study_programmes): Response
     {
-        return $this->render('study/index.html.twig', [
+        return $this->render('study/master.html.twig', [
             'programs' => $study_programmes->findBy(['grade' => 'MASTER']),
+            'programType'  => "Masters"
         ]);
     }
 }
