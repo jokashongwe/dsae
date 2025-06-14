@@ -37,6 +37,9 @@ class Professor
     #[ORM\OneToMany(targetEntity: StudyProgrammes::class, mappedBy: 'dean')]
     private Collection $studyProgrammes;
 
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $suffix = null;
+
     public function __construct()
     {
         $this->studyProgrammes = new ArrayCollection();
@@ -133,6 +136,18 @@ class Professor
                 $studyProgramme->setDean(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getSuffix(): ?string
+    {
+        return $this->suffix;
+    }
+
+    public function setSuffix(?string $suffix): static
+    {
+        $this->suffix = $suffix;
 
         return $this;
     }
