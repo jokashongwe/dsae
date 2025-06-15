@@ -1,86 +1,118 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}
-{% endblock %}
+{% block title %}{% endblock %}
 
 {% block body %}
-    <main>
-        <section
-            class="section section--component-18 section--component-18-breadcrumbs section--navy-dark section--small">
-            <div class="component-18">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12 col-lg">
-                            <div class="component-18__content component__content component__content--wide">
-                                <h1 class="component-18__title">Corps Enseignant</h1>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="component-18 component-breadcrumb">
-                <div class="container">
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="/">Accueil</a></li>
-                            <li class="breadcrumb-item"><a href="#">Contact</a></li>
-                            <li class="breadcrumb-item"><a href="/contact/staffprofiles/">Corps Enseignant</a></li>
-                        </ol>
-                    </nav>
-                </div>
-            </div>
-        </section>
-        <div class="container has-sidemenu">
-            
-            <section
-                class="section section--component-19  rectangle  rectangle--small rectangle--green-top-left rectangle--blend-off section--order-lg-inverted">
-                <span name="d.en.359075"></span>
-                <div class="component-19">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-12">
-                                <p>Liste des ensignants et personnel académique de la Faculté des Sciences Agronomiques et Environnement</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section id="h369964" class="section section--component-24 rectangle section--grey-lighter rectangle--small rectangle--yellow-top-left rectangle--blend-off">
-                <div class="component-24 component-24__profile-filters " id="componentId369965">
-                    <div class="container">
-                        <div style="padding: 1rem" class="component-24__grid ">
-                            {% for staff in professors %}
-                                <article class="component-24__item "><span name="d.en.369965"></span>
-                                    <div class="component-24__body">
-                                        <div class="component-24__content">
-                                            <h3 class="component-24__name">{{staff.suffix}} {{staff.firstname}} {{staff.lastname}}</h3>
-                                            <h4 class="component-24__role">{{ staff.grade }}</h4>
-                                            <p>{{staff.biography}}</p>
-                                        </div>
-                                    </div>
-                                    <div class="component-24__footer">
-                                        <a href="mailto:{{staff.firstname}}.{{staff.lastname}}@dsae.uniuele.cd" class="component-24__contact"><span
-                                                class="component-24__icon"><i class="las la-envelope"></i></span><span
-                                                class="component-24__icon_text">{{staff.firstname}}.{{staff.lastname}}@dsae.uniuele.cd</span></a>
-                                                <a href="tel:+353 1 716 7205" class="component-24__contact"></a>
-                                    </div>
-                                    <!-- Person structured data -->
-                                    <script type="application/ld+json">
-                                    {
-                                        "@context": "https://schema.org",
-                                        "@type": "Person",
-                                        "name": "{{staff.firstname}} {{staff.lastname}}",
-                                        "image": null,
-                                        "jobTitle": "{{ staff.grade }}"
-                                    }
-                                    </script>
-                                </article>
-                            {% endfor %}
-                            
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
-    </main>
+	<main>
+		<section class="section section--component-18 section--component-18-breadcrumbs section--navy-dark section--small">
+			<div class="component-18">
+				<div class="container">
+					<div class="row">
+						<div class="col-12 col-lg">
+							<div class="component-18__content component__content component__content--wide">
+								<h1 class="component-18__title">Corps Enseignant</h1>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="component-18 component-breadcrumb">
+				<div class="container">
+					<nav aria-label="breadcrumb">
+						<ol class="breadcrumb">
+							<li class="breadcrumb-item">
+								<a href="/">Accueil</a>
+							</li>
+							<li class="breadcrumb-item">
+								<a href="#">Contact</a>
+							</li>
+							<li class="breadcrumb-item">
+								<a href="/contact/staffprofiles/">Corps Enseignant</a>
+							</li>
+						</ol>
+					</nav>
+				</div>
+			</div>
+		</section>
+		<div class="container has-sidemenu">
+			<div class="sidemenu" style="top: 30px;">
+				<div class="sidemenu--section sidemenu--section-grey-lighter">
+					<div class="sidemenu__panel">
+						<h5>
+							<a class="collapsed" data-bs-toggle="collapse" href="#sideMenuCollapsePanel-main" type="button" aria-expanded="false" aria-controls="sideMenuCollapsePanel-main">
+								Corps Académique
+								<span class="icon d-lg-none">
+									<span class="open">
+										<svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M14.5327 0.5H9.93273V9.70027H0.732422V14.3003H9.93273V23.5H14.5327V14.3003H23.7324V9.70027H14.5327V0.5Z" fill="currentColor"></path>
+										</svg>
+									</span>
+									<span class="close">
+										<svg width="24" height="24" viewbox="0 0 24 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M0.732422 5.3002V0.700195H23.7324V5.3002H0.732422Z" fill="currentColor"></path>
+										</svg>
+									</span>
+								</span>
+							</a>
+						</h5>
+						<div class="collapse d-lg-block" id="sideMenuCollapsePanel-main">
+							<ul>
+                                {% for item in codes %}
+                                    <li {% if item.code == active %}class="active"{% endif %}>
+									    <a href="/contact/staffprofiles?code={{item.code}}" class="quicklink" title="{{item.name}} page">{{item.name}}</a>
+								    </li>
+                                {% endfor %}
+								
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<section class="section section--component-19  rectangle  rectangle--small rectangle--green-top-left rectangle--blend-off section--order-lg-inverted">
+				<span name="d.en.359075"></span>
+				<div class="component-19">
+					<div class="container">
+						<div class="row">
+							<div class="col-12">
+								<p>Liste des ensignants et personnel académique de la Faculté des Sciences Agronomiques et Environnement</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="h369964" class="section section--component-24 rectangle section--grey-lighter rectangle--small rectangle--yellow-top-left rectangle--blend-off">
+				<div class="component-24 component-24__profile-filters " id="componentId369965">
+					<div class="container">
+						<div style="padding: 1rem" class="component-24__grid ">
+							{% for staff in professors %}
+								<article class="component-24__item ">
+									<span name="d.en.369965"></span>
+									<div class="component-24__body">
+										<div class="component-24__content">
+											<h3 class="component-24__name">{{staff.suffix}}
+												{{staff.firstname}}
+												{{staff.lastname}}</h3>
+											<h4 class="component-24__role">{{ staff.grade }}</h4>
+											<p>{{staff.biography}}</p>
+										</div>
+									</div>
+									<div class="component-24__footer">
+										<a href="mailto:{{staff.email}}" class="component-24__contact">
+											<span class="component-24__icon">
+												<i class="las la-envelope"></i>
+											</span>
+											<span class="component-24__icon_text">{{staff.email}}</span>
+										</a>
+										<a href="tel:+353 1 716 7205" class="component-24__contact"></a>
+									</div>
+									<!-- Person structured data -->
+								</article>
+							{% endfor %}
+
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+	</main>
 {% endblock %}

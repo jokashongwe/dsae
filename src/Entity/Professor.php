@@ -28,7 +28,7 @@ class Professor
     #[ORM\Column(type: Types::TEXT, nullable: true)]
     private ?string $biography = null;
 
-    #[ORM\Column(length: 10)]
+    #[ORM\Column(length: 50)]
     private ?string $grade = null;
 
     /**
@@ -39,6 +39,15 @@ class Professor
 
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $suffix = null;
+
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $middlename = null;
+
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $email = null;
+
+    #[ORM\Column(length: 5, nullable: true)]
+    private ?string $profCode = null;
 
     public function __construct()
     {
@@ -148,6 +157,42 @@ class Professor
     public function setSuffix(?string $suffix): static
     {
         $this->suffix = $suffix;
+
+        return $this;
+    }
+
+    public function getMiddlename(): ?string
+    {
+        return $this->middlename;
+    }
+
+    public function setMiddlename(?string $middlename): static
+    {
+        $this->middlename = $middlename;
+
+        return $this;
+    }
+
+    public function getEmail(): ?string
+    {
+        return $this->email;
+    }
+
+    public function setEmail(?string $email): static
+    {
+        $this->email = $email;
+
+        return $this;
+    }
+
+    public function getProfCode(): ?string
+    {
+        return $this->profCode;
+    }
+
+    public function setProfCode(?string $profCode): static
+    {
+        $this->profCode = $profCode;
 
         return $this;
     }
