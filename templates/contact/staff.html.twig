@@ -58,9 +58,20 @@
 						<div class="collapse d-lg-block" id="sideMenuCollapsePanel-main">
 							<ul>
                                 {% for item in codes %}
-                                    <li {% if item.code == active %}class="active"{% endif %}>
-									    <a href="/contact/staffprofiles?code={{item.code}}" class="quicklink" title="{{item.name}} page">{{item.name}}</a>
-								    </li>
+                                    {% if item.code == active %}
+                                        
+                                            <li class="active">
+                                                <span class="currentbranch0 currentbranch currentbranch--active" >
+                                                    <a href="/contact/staffprofiles?code={{item.code}}" class="quicklink" title="{{item.name}} page">{{item.name}}</a>
+                                                </li>
+                                            </li>
+                                        
+                                    {% else %}
+                                        <li>
+									        <a href="/contact/staffprofiles?code={{item.code}}" class="quicklink" title="{{item.name}} page">{{item.name}}</a>
+								        </li>
+                                    {% endif %}
+                                    
                                 {% endfor %}
 								
 							</ul>
